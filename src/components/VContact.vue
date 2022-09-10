@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-line :data="contact" />
-    <div class="text">{{ email }}</div>
+    <a :href="email" class="text">{{ email }}</a>
   </div>
 </template>
 

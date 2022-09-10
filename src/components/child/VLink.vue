@@ -1,12 +1,12 @@
 <template>
   <div class="pb-md-3">
-    <a :href="link.github" class="icon">
+    <a :href="link.github" class="icon" target="_blank">
       <i class="fa-brands fa-github"></i>
     </a>
-    <a :href="link.resume" class="icon">
+    <a :href="link.resume" class="icon" target="_blank">
       <i class="fa-regular fa-file-lines"></i>
     </a>
-    <a :href="link.issuu" class="icon">
+    <a :href="link.issuu" class="icon" target="_blank">
       <i class="fa-solid fa-book-bookmark"></i>
     </a>
   </div>

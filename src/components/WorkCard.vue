@@ -24,10 +24,16 @@
                 v-if="i.website"
                 :href="i.website"
                 class="btn btn-outline-warning"
+                target="_blank"
               >
                 website
               </a>
-              <a v-else :href="i.github" class="btn btn-outline-warning">
+              <a
+                v-else
+                :href="i.github"
+                class="btn btn-outline-warning"
+                target="_blank"
+              >
                 github
               </a>
             </div>
