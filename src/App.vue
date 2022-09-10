@@ -1,6 +1,6 @@
 <template>
   <nav-bar @scroll="scrollTo" />
-  <self-introduction @scroll="scrollTo" />
+  <self-introduction id="SelfIntroduction" @scroll="scrollTo" />
   <about-me id="about" />
   <about-skills id="skills" />
   <work-card id="portfolio" />
@@ -30,12 +30,12 @@ export default {
   methods: {
     scrollTo(ele) {
       if (ele == "SelfIntroduction") {
-        this.$router.push(`/`);
+        this.$router.push(`/v_portfolio/`);
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         var elementPosition = document.getElementById(ele).offsetTop;
         window.scrollTo({ top: elementPosition, behavior: "smooth" });
-        this.$router.push(`/${ele}`);
+        this.$router.push(`/v_portfolio/${ele}`);
       }
     },
   },

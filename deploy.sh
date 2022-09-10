@@ -10,7 +10,7 @@ cd dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'path fixed'
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 git push -f https://github.com/joyce103/v_portfolio.git master:gh-pages
 
