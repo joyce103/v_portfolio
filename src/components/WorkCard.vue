@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row portfolio">
         <div
-          v-for="(i, index) in allinfo"
+          v-for="(i, index) in localinfo"
           :key="index"
           class="col-xl-4 col-md-6 col-sm-12 px-md-4 pt-md-5 mt-md-0 mt-5"
         >
@@ -42,6 +42,13 @@
       </div>
     </div>
   </div>
+  <button
+    v-show="showbtn"
+    @click="ShowMore()"
+    class="btn btn-outline-warning mt-5"
+  >
+    show more
+  </button>
 </template>
 <script>
 import info from "../../store";
@@ -55,7 +62,38 @@ export default {
     return {
       work: "Portfolio",
       allinfo: info.portfolio,
+      localinfo: [],
+      num: 3,
+      showbtn: true,
     };
+  },
+  created() {
+    //first show 3 portfolio
+    for (let i = 0; i < this.num; i++) {
+      this.localinfo.push(this.allinfo[i]);
+      console.log(this.localinfo);
+    }
+  },
+  watch: {
+    //listen this.num change or not
+    num() {
+      this.localinfo = [];
+      for (let i = 0; i < this.num; i++) {
+        this.localinfo.push(this.allinfo[i]);
+      }
+    },
+  },
+  methods: {
+    //when btn click add 3 items
+    ShowMore() {
+      if (this.num < this.allinfo.length) {
+        this.num += 3;
+        if (this.num >= this.allinfo.length) {
+          this.num = this.allinfo.length;
+          this.showbtn = false;
+        }
+      }
+    },
   },
 };
 </script>
