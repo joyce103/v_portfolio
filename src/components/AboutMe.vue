@@ -58,5 +58,25 @@ export default {
 svg {
   position: absolute;
   left: 0;
+  animation: liner_ani forwards 8s infinite;
+  -webkit-animation: liner_ani forwards 8s infinite;
+  stroke-dasharray: 70;
+  stroke-dashoffset: 2100;
+}
+@keyframes liner_ani {
+  from {
+    stroke-dashoffset: 2100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes liner_ani {
+  from {
+    stroke-dashoffset: 2100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 </style>

@@ -78,9 +78,8 @@ export default {
     top: 20%;
     left: -5%;
     z-index: 3;
-    -moz-animation: crowd alternate 1s infinite;
+    animation: crowd alternate 1s infinite;
     -webkit-animation: crowd alternate 1s infinite;
-    -o-animation: crowd alternate 1s infinite;
     @include phone {
       font-size: 5rem;
     }
@@ -161,6 +160,14 @@ export default {
   }
 }
 @keyframes crowd {
+  0% {
+    letter-spacing: 1rem;
+  }
+  100% {
+    letter-spacing: 0.8rem;
+  }
+}
+@-webkit-keyframes crowd {
   0% {
     letter-spacing: 1rem;
   }
