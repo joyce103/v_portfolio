@@ -34,6 +34,15 @@ export default {
       about: info.about,
     };
   },
+  created() {
+    window.addEventListener("scroll", () => {
+      const square = document.querySelector(".square");
+      let top = window.pageYOffset;
+      let sum = top + 130;
+      square.style.background =
+        "rgba(" + sum + "," + sum + "," + sum + ", 0.5)";
+    });
+  },
 };
 </script>
 
@@ -98,7 +107,7 @@ export default {
     z-index: 1;
     top: 60%;
     left: 50%;
-    background-color: #dbdcdc;
+    background-color: rgba(130, 130, 130, 0.5);
     @include phone {
       top: 65%;
       left: 65%;
