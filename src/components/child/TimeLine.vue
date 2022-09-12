@@ -18,12 +18,20 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@mixin pad {
+  @media (max-width: 820px) {
+    @content;
+  }
+}
 .line {
   position: relative;
   text-align: left;
   list-style-type: none;
   padding: 0 100px;
   line-height: 30px;
+  @include pad {
+    padding: 0 60px;
+  }
   ::before {
     content: "";
     background: #fcd39f;
