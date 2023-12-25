@@ -29,6 +29,7 @@ export default {
   },
   methods: {
     scrollTo(ele) {
+      console.log(ele);
       if (ele == "SelfIntroduction") {
         this.$router.push(`/v_portfolio/`);
         window.scrollTo({ top: 0, behavior: "smooth" });

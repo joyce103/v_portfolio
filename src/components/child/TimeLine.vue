@@ -6,6 +6,7 @@
       </div>
     </li>
     <li class="time">{{ i.time }}</li>
+    <li class="position" v-show="i.position">{{ i.position }}</li>
     <div class="descript" v-html="i.descript"></div>
   </ul>
 </template>
@@ -43,9 +44,9 @@ export default {
     z-index: 300;
   }
   .title {
-    color: #898989;
+    color: #000000;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     ::before {
       content: "";
       background: #f7d3a4;
@@ -59,10 +60,15 @@ export default {
     }
   }
   .time {
-    color: #b2b2b2;
+    color: #686868;
+  }
+  .position {
+    color: #c08a44;
+    font-weight: 700;
   }
   .descript {
-    color: #9b9b9b;
+    color: #898989;
+    padding-top: 10px;
   }
 }
 </style>

@@ -71,7 +71,7 @@ export default {
     //first show 3 portfolio
     for (let i = 0; i < this.num; i++) {
       this.localinfo.push(this.allinfo[i]);
-      console.log(this.localinfo);
+      // console.log(this.localinfo);
     }
   },
   watch: {

@@ -2,7 +2,7 @@ const info = {
   bannerimg: require("./src/assets/img/01.jpg"),
   skillsimg: require("./src/assets/img/bg01.png"),
   about:
-    "我是黃亮庭，喜歡探索新知並且努力學習，擅長前端切版、靜態網頁、網頁動畫撰寫，曾在兄弟繪數位設計工作室實習，有相關的實作經驗以及基礎，能夠快速理解專案所需並且實踐，目前也計畫朝這方向繼續精進努力。",
+    "我是黃亮庭，喜歡探索新知並且努力學習，擅長前端切版、靜態網頁、網頁動畫撰寫，能夠適應步調快速的工作環境，目前任職於日商博設技股份有限公司，擁有電商相關實作經驗及基礎，學習力強能夠快速理解專案所需並且實踐，善於溝通能夠快速融入團隊協作。",
   email: "joyce123415@gmail.com",
   links: {
     github: "https://github.com/joyce103",
@@ -13,32 +13,47 @@ const info = {
   skills: [
     {
       title: "Technologies",
-      descript: ["HTML", "CSS / SCSS", "Javascript", "jQuery", "RWD", "Vue.js"],
+      descript: [
+        "HTML",
+        "CSS / SCSS",
+        "JavaScript ES6",
+        "jQuery",
+        "RWD",
+        "Vue.js",
+      ],
     },
     {
       title: "Design",
-      descript: ["illustrator", "Photoshop", "Adobe XD", "Maya"],
+      descript: ["Adobe illustrator", "Adobe Photoshop", "Adobe XD"],
     },
   ],
   education: [
     {
       title: "元智大學資訊傳播學系",
-      time: "2017.09-2022.06",
+      time: "2017.09 - 2022.06",
       descript:
         "相關課程<br>網際網路程式設計、網頁遊戲、資料結構、網頁程式設計、人機互動......。",
     },
   ],
   experience: [
     {
-      title: "兄弟繪數位設計工作室",
-      time: "2021.07-2021.09",
+      title: "日商博設技股份有限公司",
+      time: "2022.09 - 現在",
+      position: "網頁程式設計師",
       descript:
-        "實習內容<br>協助完成前端切版、layout設計<br>利用CSS關鍵禎以及svg渲染網頁動畫<br>響應式網頁",
+        "接觸日本樂天 ( 主要 )、Shopify、WordPress 後台系統<br>負責 6 間日本樂天商店後台維護<br>完成 15+ 個日本樂天活動廣告頁面切版製作<br>負責 2 間日本樂天首頁翻新/改修<br>負責 8+ 間日本樂天定期活動對應及製作電子報<br>網頁相關緊急對應處理",
+    },
+    {
+      title: "兄弟繪數位設計工作室",
+      time: "2021.07-2021.08",
+      position: "網頁設計助理實習生",
+      descript:
+        "協助前端切版、Layout 設計<br>學習 CSS 關鍵禎以及 SVG 網頁動畫渲染<br>RWD 響應式網頁",
     },
     {
       title: "予寧文理補習班",
-      time: "2020.10-2022.06",
-      descript: "工作內容<br>檢查作業<br>管理秩序<br>數學輔導",
+      time: "2020.10 - 2022.06",
+      descript: "檢查作業<br>管理秩序<br>數學輔導",
     },
   ],
   portfolio: [

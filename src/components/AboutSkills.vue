@@ -78,20 +78,21 @@ $deep: #898989;
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     position: absolute;
     left: 0;
-    top: -100px;
+    top: -10vw;
     z-index: 1;
     width: 100%;
     height: 100%;
+    min-height: 45vw;
     @include phone {
       top: -10px;
       height: 100%;
     }
   }
   .skillheader {
-    color: $light;
+    color: $deep;
     position: absolute;
     top: 0px;
     left: 0;

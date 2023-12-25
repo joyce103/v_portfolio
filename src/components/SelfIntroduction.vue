@@ -10,7 +10,7 @@
         <p>{{ about }}</p>
       </div>
       <div class="col-md-6 pt-md-0 pt-3">
-        <a href="/about" @click.prevent="$emit('scroll', 'about')">scroll.</a>
+        <a href="/about" @click.prevent="$emit('scroll', 'about')">SCROLL.</a>
         <v-link class="mt-md-5" />
       </div>
     </div>
@@ -141,13 +141,14 @@ export default {
     a {
       writing-mode: vertical-lr;
       text-orientation: mixed;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.4rem;
       font-size: 1.2rem;
       right: 0;
       position: absolute;
-      border-left: 2px #ffffff solid;
+      // border-left: 2px #ffffff solid;
       color: #b4b4b5;
       text-decoration: none;
+      transition: 0.5s;
       &:hover {
         letter-spacing: 0.3rem;
       }
