@@ -1,54 +1,56 @@
 <template>
   <div>
-    <header-line :data="work" />
-    <div class="container">
-      <div class="row portfolio">
-        <div
-          v-for="(i, index) in localinfo"
-          :key="index"
-          class="col-xl-4 col-md-6 col-sm-12 px-md-4 pt-md-5 mt-md-0 mt-5"
-        >
-          <div class="card border-light h-100" style="position: relative">
-            <span class="time">{{ i.time }}</span>
-            <img :src="i.img" class="card-img-top" :alt="i.name" />
-            <hr />
-            <div class="card-body">
-              <h5 class="card-title">{{ i.name }}</h5>
-              <div>
-                <span v-for="(tag, k) in i.tag" :key="k">{{ tag }}</span>
+    <div>
+      <header-line :data="work" />
+      <div class="container">
+        <div class="row portfolio">
+          <div
+            v-for="(i, index) in localinfo"
+            :key="index"
+            class="col-xl-4 col-md-6 col-sm-12 px-md-4 pt-md-5 mt-md-0 mt-5"
+          >
+            <div class="card border-light h-100" style="position: relative">
+              <span class="time">{{ i.time }}</span>
+              <img :src="i.img" class="card-img-top" :alt="i.name" />
+              <hr />
+              <div class="card-body">
+                <h5 class="card-title">{{ i.name }}</h5>
+                <div>
+                  <span v-for="(tag, k) in i.tag" :key="k">{{ tag }}</span>
+                </div>
+                <p class="card-text pt-md-2" v-html="i.descript"></p>
               </div>
-              <p class="card-text pt-md-2" v-html="i.descript"></p>
-            </div>
-            <div class="card-footer">
-              <a
-                v-if="i.website"
-                :href="i.website"
-                class="btn btn-outline-warning"
-                target="_blank"
-              >
-                website
-              </a>
-              <a
-                v-else
-                :href="i.github"
-                class="btn btn-outline-warning"
-                target="_blank"
-              >
-                github
-              </a>
+              <div class="card-footer">
+                <a
+                  v-if="i.website"
+                  :href="i.website"
+                  class="btn btn-outline-warning"
+                  target="_blank"
+                >
+                  website
+                </a>
+                <a
+                  v-else
+                  :href="i.github"
+                  class="btn btn-outline-warning"
+                  target="_blank"
+                >
+                  github
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <button
+      v-show="showbtn"
+      @click="ShowMore()"
+      class="btn btn-outline-warning mt-5"
+    >
+      show more
+    </button>
   </div>
-  <button
-    v-show="showbtn"
-    @click="ShowMore()"
-    class="btn btn-outline-warning mt-5"
-  >
-    show more
-  </button>
 </template>
 <script>
 import info from "../../store";
