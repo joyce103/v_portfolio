@@ -3,14 +3,16 @@
     <header-line :data="skills" />
     <div class="skill">
       <div class="skillimg" data-speed="1"></div>
-      <div class="container-fluid skillheader pt-md-5">
+      <div class="container-fluid skillheader">
         <div class="row" v-for="(i, index) in info" :key="index">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <h3>{{ i.title }}</h3>
           </div>
-          <div class="col-md-6">
-            <ul v-for="(descript, j) in i.descript" :key="j">
-              <li>{{ descript }}</li>
+          <div class="col-md-12">
+            <ul>
+              <li v-for="(descript, j) in i.descript" :key="j">
+                {{ descript }}
+              </li>
             </ul>
           </div>
         </div>
@@ -102,13 +104,16 @@ $deep: #898989;
       display: flex;
       align-items: center;
       padding: 50px 0 0 0;
-      height: 300px;
+      // height: 300px;
       @include phone {
         height: 50%;
       }
       h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 30px;
         text-align: center;
-        color: $deep;
+        color: #000000;
         @include phone {
           margin-bottom: 5%;
           padding: 5%;
@@ -116,14 +121,18 @@ $deep: #898989;
         }
       }
       ul {
-        padding-left: 150px;
-        text-align: left;
+        text-align: center;
         list-style: none;
-        line-height: 1rem;
         font-size: 1.2rem;
+        padding-left: 0;
         @include phone() {
           padding-left: 0;
           text-align: center;
+        }
+        li {
+          font-size: 1.4rem;
+          color: $deep;
+          line-height: 2;
         }
       }
     }

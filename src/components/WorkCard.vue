@@ -138,7 +138,7 @@ $white: #ffffff;
         padding: 3px 8px;
         background-color: $orange;
         color: $white;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
       }
     }
   }

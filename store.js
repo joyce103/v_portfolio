@@ -19,12 +19,12 @@ const info = {
         "JavaScript ES6",
         "jQuery",
         "RWD",
-        "Vue.js",
+        "React.js",
       ],
     },
     {
       title: "Design",
-      descript: ["Adobe illustrator", "Adobe Photoshop", "Adobe XD"],
+      descript: ["Adobe illustrator", "Adobe Photoshop"],
     },
   ],
   education: [
@@ -41,14 +41,14 @@ const info = {
       time: "2022.09 - 現在",
       position: "網頁程式設計師",
       descript:
-        "接觸日本樂天 ( 主要 )、Shopify、WordPress 後台系統<br>負責 6 間日本樂天商店後台維護<br>完成 15+ 個日本樂天活動廣告頁面切版製作<br>負責 2 間日本樂天首頁翻新/改修<br>負責 8+ 間日本樂天定期活動對應及製作電子報<br>網頁相關緊急對應處理",
+        "操作日本樂天 ( 主要 )、Shopify、WordPress 後台系統<br>負責 6 間日本樂天商店後台維護<br>完成 15+ 個日本樂天活動廣告頁面切版製作<br>負責 2 間日本樂天首頁翻新/改修<br>負責 8+ 間日本樂天定期活動對應及製作電子報<br>網頁相關緊急對應處理",
     },
     {
       title: "兄弟繪數位設計工作室",
       time: "2021.07-2021.08",
       position: "網頁設計助理實習生",
       descript:
-        "協助前端切版、Layout 設計<br>學習 CSS 關鍵禎以及 SVG 網頁動畫渲染<br>RWD 響應式網頁",
+        "網頁 Layout 設計<br>實習期間完成 2 個一頁式網頁切版<br>使用 Bootstrap 進行前端切版<br>使用 jQuery、CSS Animation、SVG 網頁動畫渲染",
     },
     // {
     //   title: "予寧文理補習班",
@@ -57,6 +57,59 @@ const info = {
     // },
   ],
   portfolio: [
+    {
+      name: "ケルヒャー特集",
+      time: "在職",
+      img: require("./src/assets/img/bn1.jpg"),
+      descript:
+        "亮點在於表格的收合以及呈現方式，為了提高閱讀性，在滑動時需維持標題欄／商品圖欄不動，同時也透過按鈕收合使版面閱讀起來更為簡潔。",
+      website: "https://www.rakuten.ne.jp/gold/ryouhinhyakka/kaercher/",
+      tag: ["HTML", "SCSS", "JavaScript", "RWD"],
+    },
+    {
+      name: "カニ特集",
+      time: "在職",
+      img: require("./src/assets/img/bn3.jpg"),
+      descript:
+        "亮點在使用 JavaScript 抓取網頁滾動位置，在瀏覽網頁的同時增加使用者體驗。",
+      website: "https://www.rakuten.ne.jp/gold/obamakaisanbutsu/lp/2023kani/",
+      tag: ["HTML", "SCSS", "JavaScript", "RWD"],
+    },
+    {
+      name: "新生活特集",
+      time: "在職",
+      img: require("./src/assets/img/bn2.jpg"),
+      descript:
+        "利用 jQuery 結合 CSS Animation 渲染，使網頁在滾動到該元件的同時會播放動畫。",
+      website: "https://www.rakuten.ne.jp/gold/ryouhinhyakka/2023newlife/",
+      tag: ["HTML", "SCSS", "jQuery", "RWD"],
+    },
+    {
+      name: "和平フレイズ特集",
+      time: "在職",
+      img: require("./src/assets/img/bn4.jpg"),
+      descript:
+        "使用 slick.js 套件結合 CSS 偽元素使商品名稱及按鈕能夠呈現在圖片上。",
+      website: "https://www.rakuten.ne.jp/gold/ryouhinhyakka/lp/peace/",
+      tag: ["HTML", "SCSS", "jQuery", "RWD"],
+    },
+    {
+      name: "産地直送グルメ特集",
+      time: "在職",
+      img: require("./src/assets/img/bn5.jpg"),
+      descript:
+        "在文字描邊上的處理使用 span 以及 css before 做細部的處理，和 text-shadow 不同的是在視覺上看起來會更為清晰，更能展現描繪邊框的感覺。",
+      website: "https://www.rakuten.ne.jp/gold/ryouhinhyakka/sanchichokuso/",
+      tag: ["HTML", "SCSS", "JavaScript", "RWD"],
+    },
+    {
+      name: "感謝祭廣告",
+      time: "在職",
+      img: require("./src/assets/img/bn6.jpg"),
+      descript: "利用 CSS Animation 渲染按鈕動畫，使視覺看起來更加細緻。",
+      website: "https://www.rakuten.ne.jp/gold/obamakaisanbutsu/eagles/",
+      tag: ["HTML", "SCSS", "RWD"],
+    },
     {
       name: "2021空間設計大賽",
       time: "2021",
