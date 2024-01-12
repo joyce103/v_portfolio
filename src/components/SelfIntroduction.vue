@@ -87,6 +87,7 @@ export default {
     writing-mode: vertical-lr;
     text-orientation: mixed;
     letter-spacing: 1rem;
+    line-height: 1;
     // animation: crowd alternate 1s infinite;
     // -webkit-animation: crowd alternate 1s infinite;
     @include phone {
@@ -104,6 +105,10 @@ export default {
       @include pad {
         width: 100%;
         padding: 0;
+        margin-top: 20vw;
+      }
+      @include phone() {
+        margin-top: 20vw;
       }
     }
   }
@@ -158,7 +163,7 @@ export default {
   height: 9vw;
   z-index: 0;
   top: 45%;
-  left: 53%;
+  left: 51%;
   background-color: rgba(130, 130, 130, 0.5);
   @include phone {
     top: 65%;

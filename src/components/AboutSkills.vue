@@ -121,6 +121,10 @@ $deep: #898989;
         list-style: none;
         line-height: 1rem;
         font-size: 1.2rem;
+        @include phone() {
+          padding-left: 0;
+          text-align: center;
+        }
       }
     }
   }

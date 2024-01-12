@@ -30,7 +30,7 @@ const info = {
   education: [
     {
       title: "元智大學資訊傳播學系",
-      time: "2017.09 - 2022.06",
+      time: "2018.09 - 2022.06",
       descript:
         "相關課程<br>網際網路程式設計、網頁遊戲、資料結構、網頁程式設計、人機互動......。",
     },
@@ -50,11 +50,11 @@ const info = {
       descript:
         "協助前端切版、Layout 設計<br>學習 CSS 關鍵禎以及 SVG 網頁動畫渲染<br>RWD 響應式網頁",
     },
-    {
-      title: "予寧文理補習班",
-      time: "2020.10 - 2022.06",
-      descript: "檢查作業<br>管理秩序<br>數學輔導",
-    },
+    // {
+    //   title: "予寧文理補習班",
+    //   time: "2020.10 - 2022.06",
+    //   descript: "檢查作業<br>管理秩序<br>數學輔導",
+    // },
   ],
   portfolio: [
     {
@@ -62,7 +62,7 @@ const info = {
       time: "2021",
       img: require("./src/assets/img/02.png"),
       descript:
-        "一頁式活動網頁，使用svg製作動畫以及利用視差捲動渲染出不同的視覺效果，增添了整體的豐富性，同時製作此網頁也讓我學到更多製作網頁動畫的技巧。",
+        "一頁式活動網頁，使用 svg 製作動畫以及利用視差捲動渲染出不同的視覺效果，增添了整體的豐富性，同時製作此網頁也讓我學到更多製作網頁動畫的技巧。",
       website: "https://joyce103.github.io/Space-design/",
       tag: ["HTML", "CSS", "jQuery", "RWD"],
     },
@@ -80,7 +80,7 @@ const info = {
       time: "2021",
       img: require("./src/assets/img/04.png"),
       descript:
-        "一頁式網頁，利用CSS製作文字噴光效果，根據使用者滑動的速度描繪線段，讓頁面看起來生動而不呆版。",
+        "一頁式網頁，利用 CSS 製作文字噴光效果，根據使用者滑動的速度描繪線段，讓頁面看起來生動而不呆版。",
       website: "https://joyce103.github.io/Greaten/",
       tag: ["HTML", "CSS", "jQuery", "RWD"],
     },
@@ -116,7 +116,7 @@ const info = {
       time: "2019",
       img: require("./src/assets/img/05.png"),
       descript:
-        "推薦系上好友的網站，透過RWD讓網頁可以適應於各種行動裝置。<br>負責內容：所有程式內容",
+        "推薦系上好友的網站，透過 RWD 讓網頁可以適應於各種行動裝置。<br>負責內容：所有程式內容",
       website: "https://joyce103.github.io/Friend_Website/",
       tag: ["HTML", "CSS", "RWD"],
     },
