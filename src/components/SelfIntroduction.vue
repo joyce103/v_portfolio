@@ -1,20 +1,28 @@
 <template>
   <div class="container outer">
-    <span class="banner_text">LIANG.</span>
-    <div class="banner_img">
-      <img :src="bannerimg" class="img-fluid" />
-    </div>
-    <div class="square"></div>
-    <div class="row content">
-      <div class="col-md-6 d-flex align-items-end">
-        <p>{{ about }}</p>
+    <div class="banner_text">LIANG.</div>
+    <div class="col">
+      <div class="banner_img">
+        <img :src="bannerimg" class="img-fluid" />
       </div>
-      <div class="col-md-6 pt-md-0 pt-3">
-        <a href="/about" @click.prevent="$emit('scroll', 'about')">SCROLL.</a>
-        <v-link class="mt-md-5" />
+      <div class="row content">
+        <div class="col-xl-6 col-md-8 d-flex align-items-end">
+          <p>{{ about }}</p>
+        </div>
+        <div class="col-xl-6 col-md-4 pt-md-0 pt-3">
+          <a
+            class="scroll"
+            href="/about"
+            @click.prevent="$emit('scroll', 'about')"
+          >
+            SCROLL.
+          </a>
+          <v-link class="mt-md-5" />
+        </div>
       </div>
     </div>
   </div>
+  <div class="square"></div>
 </template>
 
 <script>
@@ -48,7 +56,7 @@ export default {
 
 <style scoped lang="scss">
 @mixin pad {
-  @media (max-width: 912px) {
+  @media (max-width: 1099px) {
     @content;
   }
 }
@@ -59,84 +67,74 @@ export default {
 }
 .outer {
   position: relative;
-  padding: 10% 0 0 0;
-  height: 100vh;
+  padding: 5% 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 1;
   @include pad {
-    height: 80vh;
+    height: 85vh;
   }
   @include phone {
-    height: 100vh;
+    height: 80vh;
   }
   .banner_text {
     color: #9e9f9f;
-    font-size: 7rem;
+    font-size: 7.5vw;
     font-weight: 100;
     writing-mode: vertical-lr;
     text-orientation: mixed;
     letter-spacing: 1rem;
-    position: absolute;
-    top: 20%;
-    left: -5%;
-    z-index: 3;
-    animation: crowd alternate 1s infinite;
-    -webkit-animation: crowd alternate 1s infinite;
+    line-height: 1;
+    // animation: crowd alternate 1s infinite;
+    // -webkit-animation: crowd alternate 1s infinite;
     @include phone {
-      font-size: 5rem;
+      display: none;
+    }
+    @include pad() {
+      display: none;
     }
   }
   .banner_img {
-    padding: 5% 0 5% 5%;
+    margin-top: 5%;
     text-align: right;
-    position: absolute;
-    top: 10%;
-    right: 0;
-    z-index: 2;
     img {
       width: 45%;
       @include pad {
         width: 100%;
         padding: 0;
+        margin-top: 20vw;
       }
-    }
-  }
-  .square {
-    position: absolute;
-    width: 10%;
-    height: 19%;
-    z-index: 1;
-    top: 60%;
-    left: 50%;
-    background-color: rgba(130, 130, 130, 0.5);
-    @include phone {
-      top: 65%;
-      left: 65%;
-    }
-    @include pad {
-      top: 10%;
-      left: 10%;
-      width: 100px;
-      height: 100px;
+      @include phone() {
+        margin-top: 20vw;
+      }
     }
   }
   .content {
     color: #888888;
     line-height: 2rem;
-    padding: 0 0 0 5%;
-    position: absolute;
-    bottom: 0;
-    left: 5%;
+    margin-top: 5%;
     z-index: 3;
     @include pad {
       padding: 0%;
     }
     @include phone {
       top: 50%;
-      padding: 10% 5% 5% 5%;
+      padding: 0% 5% 5% 5%;
       left: 0;
       margin: 0;
     }
     p {
+      padding: 0 3vw;
       text-align: justify;
+      @include phone() {
+        padding: 10vw 0;
+      }
+      @include pad() {
+        padding: 3vw 0;
+      }
     }
     a {
       writing-mode: vertical-lr;
@@ -145,7 +143,6 @@ export default {
       font-size: 1.2rem;
       right: 0;
       position: absolute;
-      // border-left: 2px #ffffff solid;
       color: #b4b4b5;
       text-decoration: none;
       transition: 0.5s;
@@ -158,6 +155,33 @@ export default {
         border-bottom: 2px #ffffff solid;
       }
     }
+  }
+}
+.square {
+  position: absolute;
+  width: 9vw;
+  height: 9vw;
+  z-index: 0;
+  top: 45%;
+  left: 51%;
+  background-color: rgba(130, 130, 130, 0.5);
+  @include phone {
+    top: 65%;
+    left: 65%;
+  }
+  @include pad {
+    top: 10%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+  }
+}
+.scroll {
+  @include phone() {
+    display: none;
+  }
+  @include pad() {
+    display: none;
   }
 }
 @keyframes crowd {
